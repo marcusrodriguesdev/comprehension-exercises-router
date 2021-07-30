@@ -13,11 +13,11 @@ export default class App extends Component {
           <Home />
         </Route>
         <Route path="/about" component={ About } />
-        <Route path="/users" render={() => <Users greetingMessage="Good morning" />  } />
+        <Route path="/users/:id" render={(props) => <Users {...props} greetingMessage="Good morning" />  } />
         <ul>
           <Link className="link" to="/">Home</Link>
           <Link className="link" to="/about">About</Link>
-          <Link className="link" to="/users">Users</Link>
+          <Link className="link" to="/users/10">Users</Link>
         </ul>
       </BrowserRouter>
     );
