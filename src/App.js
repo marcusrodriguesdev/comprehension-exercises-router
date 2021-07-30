@@ -1,3 +1,4 @@
+import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -14,9 +15,9 @@ export default class App extends Component {
         <Route path="/about" component={ About } />
         <Route path="/users" component={ Users } />
         <ul>
-          <Link></Link>
-          <Link></Link>
-          <Link></Link>
+          <Link className="link" to="/">Home</Link>
+          <Link className="link" to="/about">About</Link>
+          <Link className="link" to="/users">Users</Link>
         </ul>
       </BrowserRouter>
     );
